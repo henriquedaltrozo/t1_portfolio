@@ -897,7 +897,7 @@ footer .footer__social a:hover {
   font-size: var(--smaller-font-size);
   text-align: center;
   color: var(--text-color-light);
-  margin-top: var(--mb-3);
+  margin-bottom: var(--mb-3);
 }
 
 .footer__title,
@@ -1192,7 +1192,7 @@ footer .footer__social a:hover {
   }
 
   .footer__bg {
-    padding: 3rem 0 3.5rem;
+    padding: 2rem 0;
   }
 
   .footer__links {
@@ -1201,11 +1201,11 @@ footer .footer__social a:hover {
   }
 
   .footer__socials {
-    justify-self: flex-end;
+    justify-self: center;
   }
 
   .footer__copy {
-    margin-top: 4.5rem;
+    margin-top: 3rem;
   }
 }
 
