@@ -184,7 +184,7 @@ img {
   left: 0;
   z-index: var(--z-fixed);
   background-color: var(--body-color);
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 
 /*==================== NAV ====================*/
