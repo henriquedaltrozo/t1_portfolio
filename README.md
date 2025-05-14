@@ -1,4 +1,4 @@
-# Portfolio - Jean de Moura
+# Portfólio - Jean de Moura
 
 ## 📋 Descrição
 Este é um site de portfólio pessoal desenvolvido para Jean de Moura, apresentando suas habilidades, experiências profissionais e projetos.
