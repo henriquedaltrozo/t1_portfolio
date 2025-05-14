@@ -352,7 +352,7 @@ img {
   font-size: var(--small-font-size);
   color: var(--title-color);
   font-weight: var(--font-medium);
-  margin-right: var(--mb-0-25);
+  margin-right: var(--mb-0-250);
 }
 
 .home__scroll-arrow {
@@ -409,16 +409,15 @@ img {
 }
 
 /*==================== ABOUT ====================*/
-.about__img {
-  width: 200px;
-  border-radius: .5rem;
-  justify-self: center;
-  align-self: center;
+.about__container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .about__description {
-  text-align: center;
-  margin-bottom: var(--mb-2-5);
+  text-align: justify !important;
+  text-indent: 40px;
 }
 
 .about_info {
@@ -446,6 +445,13 @@ img {
 .about__buttons {
   display: flex;
   justify-content: center;
+}
+
+.about__data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 /*==================== SKILLS ====================*/
@@ -687,6 +693,7 @@ img {
 
 .portfolio__img {
   width: 265px;
+  height: 210px;
   border-radius: .5rem;
   justify-self: center;
 }
@@ -857,57 +864,17 @@ img {
   padding-top: 2rem;
 }
 
-.footer__container {
-  row-gap: 3.5rem;
-}
-
 .footer__bg {
   background-color: var(--first-color);
   padding: 2rem 0 3rem;
-}
-
-.footer__title {
-  font-size: var(--h1-font-size);
-  margin-bottom: var(--mb-0-25);
-}
-
-.footer__subtitle {
-  font-size: var(--small-font-size);
-}
-
-.footer__links {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1.5rem;
-}
-
-.footer__link:hover {
-  color: var(--first-color-lighter);
-}
-
-.footer__social {
-  font-size: 1.25rem;
-  margin-right: var(--mb-1-5);
-}
-
-footer .footer__social a:hover {
-  color: var(--first-color-lighter);
 }
 
 .footer__copy {
   font-size: var(--smaller-font-size);
   text-align: center;
   color: var(--text-color-light);
-  margin-bottom: var(--mb-3);
+  margin-bottom: var(--mb-2);
 }
-
-.footer__title,
-.footer__subtitle,
-.footer__link,
-.footer__social {
-  color: #fff;
-}
-
 
 /*========== SCROLL UP ==========*/
 .scrollup {
@@ -1043,6 +1010,10 @@ footer .footer__social a:hover {
   .footer__container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .about__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1158,10 +1129,6 @@ footer .footer__social a:hover {
 
   .swiper-error{
     visibility: hidden;
-  }
-
-  .portfolio__img {
-    width: 320px;
   }
 
   .portfolio__content {
