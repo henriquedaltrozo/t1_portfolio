@@ -161,6 +161,13 @@ if (selectedTheme) {
   // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
   document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
   themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
+} else {
+  // If there's no selected theme, we set dark theme as default
+  document.body.classList.add(darkTheme)
+  themeButton.classList.add(iconTheme)
+  // Save these preferences as default
+  localStorage.setItem('selected-theme', getCurrentTheme())
+  localStorage.setItem('selected-icon', getCurrentIcon())
 }
 
 // Activate / deactivate the theme manually with the button
