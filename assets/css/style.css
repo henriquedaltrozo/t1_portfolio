@@ -101,9 +101,6 @@ body.dark-theme {
   color: var(--first-color);
 }
 
-
-
-
 /*==================== BASE ====================*/
 * {
   box-sizing: border-box;
@@ -813,8 +810,13 @@ img {
 
 /*==================== CONTACT ME ====================*/
 .contact__container {
-  row-gap: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  row-gap: 1rem;
+  column-gap: 11rem;
+  align-items: start;
 }
+
 
 .contact__information {
   display: flex;
