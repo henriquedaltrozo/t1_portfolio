@@ -97,9 +97,9 @@ body.dark-theme {
   margin: 0;
 }
 
-html {
+/*html {
   scroll-behavior: smooth;
-}
+}*/
 
 body {
   margin: 0 0 var(--header-height) 0;
@@ -169,7 +169,7 @@ img {
   left: 0;
   z-index: var(--z-fixed);
   background-color: var(--body-color);
-  margin-top: 2rem;
+  margin-top: -2rem;
 }
 
 /*==================== NAV ====================*/
@@ -179,6 +179,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 3rem;
 }
 
 .nav__logo,
@@ -621,11 +622,12 @@ img {
 .contact__title {
   font-size: var(--md-font-size);
   font-weight: var(--font-medium);
+  color: #5a78f0;
 }
 
 .contact__subtitle {
   font-size: var(--xs-font-size);
-  color: var(--text-color-light);
+  color: #f1f3f7;
 }
 
 /*==================== FOOTER ====================*/
@@ -641,7 +643,7 @@ img {
 .footer__copy {
   font-size: var(--xs-font-size);
   text-align: center;
-  color: var(--text-color-light);
+  color: #1b2238;
   margin-bottom: var(--mb-2);
 }
 
@@ -656,6 +658,7 @@ img {
   border-radius: .4rem;
   z-index: var(--z-tooltip);
   transition: .4s;
+  margin-right: 265px;
 }
 
 .scrollup:hover {

@@ -69,7 +69,7 @@ function scrollActive(){
 
     sections.forEach(current =>{
         const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 50;
+        const sectionTop = current.offsetTop - 200;
         sectionId = current.getAttribute('id')
 
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
@@ -133,3 +133,78 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+// Scroll com offset de -150px
+document.querySelectorAll('.nav__link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+
+        // Verifica se é um link âncora
+        if (href.startsWith('#')) {
+            e.preventDefault();
+
+            const target = document.querySelector(href);
+            if (target) {
+                const offset = 150;
+                const elementPosition = target.offsetTop;
+                const offsetPosition = elementPosition - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+
+                // Fecha o menu mobile, se necessário
+                const navMenu = document.getElementById('nav-menu');
+                navMenu.classList.remove('show-menu');
+            }
+        }
+    });
+});
+
+// Scroll com offset de -150px para nav__link
+document.querySelectorAll('.nav__link').forEach(link => {
+    link.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                const offset = 150;
+                const elementPosition = target.offsetTop;
+                const offsetPosition = elementPosition - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+
+                // Fecha o menu mobile
+                const navMenu = document.getElementById('nav-menu');
+                navMenu.classList.remove('show-menu');
+            }
+        }
+    });
+});
+
+// Scroll com offset de -150px para o botão "Role para baixo"
+const scrollDownBtn = document.querySelector('.home__scroll-button');
+if (scrollDownBtn) {
+    scrollDownBtn.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                const offset = 150;
+                const elementPosition = target.offsetTop;
+                const offsetPosition = elementPosition - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    });
+}
