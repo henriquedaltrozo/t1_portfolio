@@ -3,7 +3,7 @@
 
 /*==================== VARIABLES CSS ====================*/
 :root {
-  --header-height: 3rem;
+  --header-height: 5rem;
 
   /*========== Colors ==========*/
   /* Change favorite color */
@@ -277,6 +277,11 @@ img {
 }
 
 /*==================== HOME ====================*/
+.home__scroll {
+  display: flex;
+  justify-content: center;
+}
+
 .home__container {
   gap: 1rem;
 }
