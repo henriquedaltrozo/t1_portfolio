@@ -686,6 +686,78 @@ img {
   visibility: visible;
 }
 
+/*==================== EXPERIENCE ====================*/
+.experience__container {
+  row-gap: 2.5rem;
+}
+
+.experience__content {
+  position: relative;
+  padding: 2rem;
+  background-color: var(--container-color);
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  transition: .3s;
+}
+
+.experience__content:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.experience__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-0-5);
+  color: var(--first-color);
+  font-weight: var(--font-medium);
+}
+
+.experience__subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  margin-bottom: var(--mb-1);
+  display: block;
+}
+
+.experience__calendar {
+  display: flex;
+  align-items: center;
+  font-size: var(--smaller-font-size);
+  color: var(--text-color);
+  margin-bottom: var(--mb-1);
+}
+
+.experience__calendar i {
+  margin-right: .25rem;
+  font-size: 1rem;
+  color: var(--first-color);
+}
+
+.experience__description {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.experience__description p {
+  margin-bottom: var(--mb-0-5);
+}
+
+/* For medium devices */
+@media screen and (min-width: 568px) {
+  .experience__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 768px) {
+  .experience__container {
+    padding: 1rem;
+  }
+}
+
 /*==================== PORTFOLIO ====================*/
 .portfolio__container {
   overflow: initial;
@@ -1023,6 +1095,10 @@ img {
   .about__container {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .experience__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1183,6 +1259,10 @@ img {
 
   .footer__copy {
     margin-top: 3rem;
+  }
+
+  .experience__container {
+    padding: 1rem;
   }
 }
 
