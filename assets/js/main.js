@@ -46,31 +46,6 @@ skillsHeader.forEach((el) => {
     el.addEventListener('click', toggleSkills)
 })
 
-/*==================== QUALIFICATION TABS ====================*/
-
-
-/*==================== SERVICES MODAL ====================*/
-const modalViews = document.querySelectorAll('.services__modal'),
-    modalBtns = document.querySelectorAll('.services__button'),
-    modalCloses = document.querySelectorAll('.services__modal-close')
-
-let modal = function (modalClick) {
-    modalViews[modalClick].classList.add('active-modal')
-}
-
-modalBtns.forEach((modalBtn, i) => {
-    modalBtn.addEventListener('click', () => {
-        modal(i)
-    })
-})
-
-modalCloses.forEach((modalClose) => {
-    modalClose.addEventListener('click', () => {
-        modalViews.forEach((modalView) => {
-            modalView.classList.remove('active-modal')
-        })
-    })
-})
 /*==================== PORTFOLIO SWIPER  ====================*/
 let swiperPortfolio = new Swiper('.portfolio__container', {
     cssMode: true,
@@ -84,25 +59,6 @@ let swiperPortfolio = new Swiper('.portfolio__container', {
         el: '.swiper-pagination',
         clickable: true,
     },
-});
-
-/*==================== TESTIMONIAL ====================*/
-let swiperTestimonial = new Swiper('.testimonial__container', {
-    loop: true,
-    grabCursor: true,
-    spaceBetween: 48,
-
-
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        dynamicBullets: true,
-    },
-    breakpoints:{
-        568:{
-            slidesPerview: 2,
-        }
-    }
 });
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
@@ -133,7 +89,6 @@ function scrollHeader(){
 }
 window.addEventListener('scroll', scrollHeader)
 
-
 /*==================== SHOW SCROLL UP ====================*/
 function scrollUp(){
     const scrollUp = document.getElementById('scroll-up');
@@ -141,7 +96,6 @@ function scrollUp(){
     if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
-
 
 /*==================== DARK LIGHT THEME ====================*/ 
 const themeButton = document.getElementById('theme-button')
