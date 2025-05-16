@@ -145,7 +145,7 @@ document.querySelectorAll('.nav__link').forEach(link => {
 
             const target = document.querySelector(href);
             if (target) {
-                const offset = 150;
+                const offset = 120;
                 const elementPosition = target.offsetTop;
                 const offsetPosition = elementPosition - offset;
 
@@ -170,7 +170,7 @@ document.querySelectorAll('.nav__link').forEach(link => {
             e.preventDefault();
             const target = document.querySelector(href);
             if (target) {
-                const offset = 150;
+                const offset = 120;
                 const elementPosition = target.offsetTop;
                 const offsetPosition = elementPosition - offset;
 
@@ -196,7 +196,7 @@ if (scrollDownBtn) {
             e.preventDefault();
             const target = document.querySelector(href);
             if (target) {
-                const offset = 150;
+                const offset = 120;
                 const elementPosition = target.offsetTop;
                 const offsetPosition = elementPosition - offset;
 
