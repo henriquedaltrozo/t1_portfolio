@@ -76,7 +76,8 @@
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
-  padding-bottom: 5rem;
+  padding-bottom: 4.5rem;
+  padding-right: 2rem;
 }
 
 .skill__card:hover {
@@ -422,7 +423,7 @@ img {
 .button {
   display: inline-block;
   background-color: var(--first-color);
-  color: #fff;
+  color: var(--title-color);
   padding: 1rem;
   border-radius: .5rem;
   font-weight: var(--font-medium);
@@ -559,7 +560,7 @@ img {
 .experience__title {
   font-size: var(--md-font-size);
   margin-bottom: var(--mb-0-5);
-  color: var(--first-color);
+  color: var(--title-color);
   font-weight: var(--font-medium);
 }
 
@@ -692,12 +693,12 @@ img {
 .contact__title {
   font-size: var(--md-font-size);
   font-weight: var(--font-medium);
-  color: #5a78f0;
+  color: var(--title-color);
 }
 
 .contact__subtitle {
   font-size: var(--xs-font-size);
-  color: #f1f3f7;
+  color: var(--text-color);
 }
 
 /*==================== FOOTER ====================*/
@@ -713,7 +714,7 @@ img {
 .footer__copy {
   font-size: var(--xs-font-size);
   text-align: center;
-  color: #1b2238;
+  color: var(--title-color);
   margin-bottom: var(--mb-2);
 }
 
