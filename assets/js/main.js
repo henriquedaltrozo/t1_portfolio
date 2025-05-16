@@ -135,7 +135,7 @@ themeButton.addEventListener('click', () => {
 })
 
 // Scroll com offset de -150px
-document.querySelectorAll('.nav__link').forEach(link => {
+document.querySelectorAll('.nav__link, .nav__logo').forEach(link => {
     link.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
 
@@ -163,7 +163,7 @@ document.querySelectorAll('.nav__link').forEach(link => {
 });
 
 // Scroll com offset de -150px para nav__link
-document.querySelectorAll('.nav__link').forEach(link => {
+document.querySelectorAll('.nav__link, .nav__logo, .scroll-link').forEach(link => {
     link.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
         if (href.startsWith('#')) {
