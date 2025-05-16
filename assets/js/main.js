@@ -1,7 +1,6 @@
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const navMenu = document.getElementById('nav-menu'),
-    navToggle = document.getElementById('nav-toggle'),
-    navClose = document.getElementById('nav-close')
+    navToggle = document.getElementById('nav-toggle')
 /*===== MENU SHOW =====*/
 /* Validate if constant exists */
 if (navToggle) {
@@ -10,22 +9,22 @@ if (navToggle) {
     })
 }
 
-/*===== MENU HIDDEN =====*/
-/* Validate if constant exists */
-if (navClose) {
-    navClose.addEventListener('click', () => {
-        navMenu.classList.remove('show-menu')
-    })
-}
-
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')
+const navClose = document.getElementById('nav-close')
 
 function linkAction() {
     const navMenu = document.getElementById('nav-menu')
     // When we click on each nav__link, we remove the show-menu class
     navMenu.classList.remove('show-menu')
 }
+
+// Evento para fechar o menu ao clicar no ícone de fechamento
+if (navClose) {
+    navClose.addEventListener('click', linkAction)
+}
+
+// Evento para fechar o menu ao clicar nos links
 navLink.forEach(n => n.addEventListener('click', linkAction))
 /*==================== ACCORDION SKILLS ====================*/
 const skillsContent = document.getElementsByClassName('skills__content'),
@@ -90,12 +89,7 @@ function scrollHeader(){
 window.addEventListener('scroll', scrollHeader)
 
 /*==================== SHOW SCROLL UP ====================*/
-function scrollUp(){
-    const scrollUp = document.getElementById('scroll-up');
-    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-    if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollUp)
+// Removido por não ter elemento com id 'scroll-up' no HTML
 
 /*==================== DARK LIGHT THEME ====================*/ 
 const themeButton = document.getElementById('theme-button')
@@ -134,35 +128,7 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
-// Scroll com offset de -150px
-document.querySelectorAll('.nav__link, .nav__logo').forEach(link => {
-    link.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-
-        // Verifica se é um link âncora
-        if (href.startsWith('#')) {
-            e.preventDefault();
-
-            const target = document.querySelector(href);
-            if (target) {
-                const offset = 120;
-                const elementPosition = target.offsetTop;
-                const offsetPosition = elementPosition - offset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-
-                // Fecha o menu mobile, se necessário
-                const navMenu = document.getElementById('nav-menu');
-                navMenu.classList.remove('show-menu');
-            }
-        }
-    });
-});
-
-// Scroll com offset de -150px para nav__link
+// Scroll com offset de -150px para todos os links de navegação
 document.querySelectorAll('.nav__link, .nav__logo, .scroll-link').forEach(link => {
     link.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
@@ -179,7 +145,7 @@ document.querySelectorAll('.nav__link, .nav__logo, .scroll-link').forEach(link =
                     behavior: 'smooth'
                 });
 
-                // Fecha o menu mobile
+                // Fecha o menu mobile, se necessário
                 const navMenu = document.getElementById('nav-menu');
                 navMenu.classList.remove('show-menu');
             }
